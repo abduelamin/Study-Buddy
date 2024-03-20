@@ -1780,13 +1780,6 @@ This sorts our array in alphabetical order.
 
 
 
-
-
-
-
-
-
-
 flat() does as the name suggests, it flattens the entire array therefore any nested array will become un-nested and will be just one big array of non-nested items.We can then use the spread operator to spread over the entire array
 
 e.g. 
@@ -1817,10 +1810,6 @@ let flattenedArray = array.flat();
 console.log(flattenedArray); // Output: [1, 2, [3]]
 
 
-
-
-
-
 Positive Integer:
 If you provide a positive integer n, the flat method will flatten the array up to n levels.
 
@@ -1839,16 +1828,6 @@ If you provide Infinity as the argument, the flat method will recursively flatte
 let array = [1, [2, [3]]];
 let flattenedArray = array.flat(Infinity);
 console.log(flattenedArray); // Output: [1, 2, 3]
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1949,16 +1928,7 @@ myArray.forEach(function (value, index){
 
 
 
-
-
-
-
 VERY IMPORTANT NOTE: The forEach method does not return a new array or any value. It iterates over the elements of the array and applies a provided function to each element. forEach is just like a for loop and so it cant use a return value within its function. forEach is just for looping purposes. The other array iterator methods are for returning a different value or array.
-
-
-
-
-
 
 map():
 
@@ -2002,11 +1972,6 @@ Function doubleIT(value) {
 let newnum = num.map(doubleIT)
 
 
-
-
-
-
-
 You don’t necessarily need to write it like this. Whereby you have a standalone function. You can instead write it like this so that its similar to how you’ve written the other array iterator methods: Therefore, we can use anonymous function.
 
 let num = [1, 2, 3, 4 ,5]
@@ -2019,12 +1984,6 @@ let newnum = num.map(
 
 
 console.log(newnum);
-
-
-
-
-
-
 
 
 
@@ -2057,9 +2016,6 @@ let odds = numbers.filter(function(value){
         return  value
     }
 })
-
-
-
 
 
 reduce(): 
@@ -2172,7 +2128,6 @@ All these iterators methods are anonymous functions but if you want to give it a
 
 
 
-
 Sets:
 
 Theory:
@@ -2190,7 +2145,6 @@ Create a variable and assign it ` new Set().
 E.g. 
 
 Let fruits = new Set()
-
 
 
 
@@ -2228,16 +2182,6 @@ How to clear the set?
 variableName.clear() - This removes all the values from the set
 
 
-
-
-
-
-
-
-
-
-
-
 Important feature:
 
 
@@ -2262,14 +2206,6 @@ forEach()
 For of loop
 
 Are the only ways to iterate through a set.
-
-
-
-
-
-
-
-
 
 JS Functions:
 
@@ -2301,12 +2237,6 @@ E.g.
 message();    - And so in your console you’ll see the word hello.
 
 console.log(message) - This won’t print the code `hello` it will just display the entire function on the log. The only way to execute a function code is to have the function name followed by brackets
-
-
-
-
-
-
 
 
 We can code anything inside a function but whatever is inside the function is only available to the function.
@@ -2359,11 +2289,7 @@ Whereas with function expressions we cant do that because variables can only be 
 
 
 
-
-
-
 Parameters and Arguments:
-
 
 Parameters are written inside the () and we treat them like variables and use them inside the function code block.
 When you call the function, inside the () is where you’ll define the values you want to give that parameter. These values that are written on the called function are called arguments
@@ -2375,8 +2301,6 @@ e.g . function favGame(game){
 favGame(`MGS`)
 
 This will display `My fav game is MGS`
-
-
 
 
 You can have a list of parameters (but they must be separated by commas) and when you come to give the arguments (i.e. values) to these parameters on the called function () then you must know that they will occur in the order that the parameter was written
