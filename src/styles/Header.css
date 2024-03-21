@@ -1,0 +1,15 @@
+.header {
+  background-color: #384047;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  width: 38%;
+  height: 38%;
+}
+
+.header div {
+  margin-bottom: 0;
+  padding: 0;
+}
