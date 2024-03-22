@@ -4,10 +4,8 @@ Study Buddy is a custom AI chatbot designed to answer questions based on a speci
 
 ## Technologies Used
 
-- ![React.js](https://img.icons8.com/ios-filled/50/000000/react-native.png) React.js: Used for building the frontend user interface.
-- ![Font Awesome](https://img.icons8.com/ios-filled/50/000000/font-awesome.png) Font Awesome: Provides icons for buttons and user interface elements.
-- ![Node.js](https://img.icons8.com/ios-filled/50/000000/nodejs.png) Node.js: Used for backend development and server-side logic.
-- ![Supabase](https://img.icons8.com/color/48/000000/supabase.png) Supabase: Utilized for storing and managing the knowledge base data.
+- ![React.js](https://img.icons8.com/color/48/000000/react-native.png) React.js: Used for building the frontend user interface.
+- ![Node.js](https://img.icons8.com/color/48/000000/nodejs.png) Node.js: Used for backend development and server-side logic.
 - ![HTML](https://img.icons8.com/color/48/000000/html-5--v1.png) HTML: Markup language used for structuring the web pages.
 - ![CSS](https://img.icons8.com/color/48/000000/css3.png) CSS: Styling language used for designing the appearance of the web pages.
 - ![JavaScript](https://img.icons8.com/color/48/000000/javascript.png) JavaScript: Programming language used for implementing interactivity and functionality.
