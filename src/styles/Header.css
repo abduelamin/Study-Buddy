@@ -14,7 +14,7 @@
   padding: 0;
 }
 
-@media screen and (min-width: 440px) and (max-width: 900px) {
+@media screen and (min-width: 375px) and (max-width: 900px) {
   .header {
     padding: 10px;
   }
@@ -29,7 +29,7 @@
     padding: 5px;
   }
   .logo {
-    width: 10%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
   }
 }

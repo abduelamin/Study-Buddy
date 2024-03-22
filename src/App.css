@@ -199,7 +199,7 @@ aside {
   line-height: 20px;
 }
 
-@media screen and (min-width: 435px) and (max-width: 900px) {
+@media screen and (min-width: 375px) and (max-width: 900px) {
   .chatContainer {
     display: flex;
     flex-direction: column;
@@ -221,14 +221,13 @@ aside {
   }
 
   aside {
-    margin: 20px;
+    margin: 40px;
     padding: 20px;
     background-color: #2e3238;
     display: flex;
     justify-content: center;
     border-radius: 15px;
-    max-width: 400px;
+    max-width: 250px;
     color: #fff;
-    max-height: 90px;
   }
 }
