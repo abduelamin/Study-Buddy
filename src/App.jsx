@@ -34,9 +34,9 @@ function App() {
   const retriever = useRetriever();
   const { fetchKnowledgeBase, baseData } = useFetchBase(); // Custom hook to form vector store one pageload only or unless knowlegebase has changed. I need to make a robust way of creating the vector base and then removing this from the app to avoid constant refreshing of the app populating th vector base unnecessarily.
 
-  useEffect(() => {
-    fetchKnowledgeBase();
-  }, [baseData]);
+  // useEffect(() => {
+  //   fetchKnowledgeBase();
+  // }, [baseData]);
 
   const OAIKEY = "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";
 
@@ -104,7 +104,6 @@ function App() {
       setMessageHistory([...updatedChatHistory, response]);
 
       localStorage.setItem("history", JSON.stringify(messageHistory));
-      console.log(messageHistory);
     } catch (err) {
       console.error(err);
     }
