@@ -122,9 +122,9 @@ function App() {
       </header>
       <main>
         <section className="chatContainer">
-          <div class="tooltip">
-            <div class="icon">i</div>
-            <div class="tooltiptext">
+          <div className="tooltip">
+            <div className="icon">i</div>
+            <div className="tooltiptext">
               🤖 Study Buddy is powered by OpenAI's free tier, which has a limit
               of 3 requests per minute. Please wait a few seconds between
               submitting your questions. If the bot takes longer to respond,

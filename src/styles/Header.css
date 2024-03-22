@@ -5,11 +5,31 @@
 }
 
 .logo {
-  width: 38%;
-  height: 38%;
+  width: 45%;
+  height: 45%;
 }
 
 .header div {
   margin-bottom: 0;
   padding: 0;
+}
+
+@media screen and (min-width: 440px) and (max-width: 900px) {
+  .header {
+    padding: 10px;
+  }
+  .logo {
+    width: 80%;
+    height: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    padding: 5px;
+  }
+  .logo {
+    width: 10%;
+    height: 100%;
+  }
 }
