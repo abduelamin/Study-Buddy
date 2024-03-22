@@ -16,10 +16,20 @@ import "./App.css";
 import useFetchBase from "./Utilities/FetchBase";
 import useRetriever from "./Utilities/Retriever";
 import Header from "./components/Header";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import {
+  faPaperPlane,
+  faTrashAlt,
+  faTrash,
+  faTimes,
+} from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   const [userInput, setUserInput] = useState("");
-  const [messageHistory, setMessageHistory] = useState([]);
+  const [messageHistory, setMessageHistory] = useState(() => {
+    return JSON.parse(localStorage.getItem("history")) || [];
+  });
   const [loading, setLoading] = useState(false);
   const retriever = useRetriever();
   const { fetchKnowledgeBase, baseData } = useFetchBase(); // Custom hook to form vector store one pageload only or unless knowlegebase has changed. I need to make a robust way of creating the vector base and then removing this from the app to avoid constant refreshing of the app populating th vector base unnecessarily.
@@ -92,9 +102,17 @@ function App() {
       });
       setLoading(false);
       setMessageHistory([...updatedChatHistory, response]);
+
+      localStorage.setItem("history", JSON.stringify(messageHistory));
+      console.log(messageHistory);
     } catch (err) {
       console.error(err);
     }
+  };
+
+  const handleClick = () => {
+    setMessageHistory([]);
+    localStorage.setItem("history", JSON.stringify([]));
   };
 
   return (
@@ -104,6 +122,16 @@ function App() {
       </header>
       <main>
         <section className="chatContainer">
+          <div class="tooltip">
+            <div class="icon">i</div>
+            <div class="tooltiptext">
+              🤖 Study Buddy is powered by OpenAI's free tier, which has a limit
+              of 3 requests per minute. Please wait a few seconds between
+              submitting your questions. If the bot takes longer to respond,
+              please allow up to 30 seconds for a reply.
+            </div>
+          </div>
+
           <div className="messagesContainer">
             {messageHistory.map((msg, index) => (
               <div
@@ -131,16 +159,28 @@ function App() {
               placeholder="Ask Me Anything"
             />
             <button className="customButton" onClick={handleSubmit}>
-              Send
+              <FontAwesomeIcon icon={faPaperPlane} />
+            </button>
+
+            <button
+              className="customButton"
+              onClick={handleClick}
+              title="Clear Chat History"
+            >
+              <FontAwesomeIcon icon={faTrashAlt} />
             </button>
           </form>
         </section>
         <aside>
           <p>
-            This AI is custom tailored to give responses based on my personal
-            vanilla Javascript notes
+            🤖 This AI is customised to provide responses based on my personal
+            vanilla JavaScript notes.
           </p>
-          <a href="">
+          <a
+            href="https://drive.google.com/file/d/1Y943kBOkghIIze5LRre8SPxwI1BjFLCV/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <button className="studyGuide">View Study Guide</button>
           </a>
         </aside>
@@ -151,4 +191,4 @@ function App() {
 
 export default App;
 
-// TODO:   Enable user to upload their own files. AND fix API issue being open to the world
+// TODO:   Enable user to upload their own files. AND fix API issue being open to the world.
