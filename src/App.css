@@ -3,7 +3,7 @@
 }
 main {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -12,7 +12,7 @@ main {
 }
 
 .chatContainer {
-  width: 50%;
+  width: 55%;
   padding: 40px;
   background-color: #2e3238;
   border-radius: 15px;
