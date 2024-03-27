@@ -8,7 +8,7 @@ const useRetriever = () => {
   const supabaseURL = "https://wpmjfndjjsvpqtwoeymu.supabase.co";
   const supabaseAPIKey =
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndwbWpmbmRqanN2cHF0d29leW11Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTAwNTgzNzYsImV4cCI6MjAyNTYzNDM3Nn0.s5w7weREkGnUFwZvUgMEDvXeeRmOO2a_IhQkTXssR2o";
-  const openAIKey = import.meta.env.VITE_openAIApiKey;
+  const openAIKey = "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";
 
   const embeddings = new OpenAIEmbeddings({ openAIApiKey: openAIKey });
 
