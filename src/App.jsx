@@ -38,7 +38,7 @@ function App() {
   //   fetchKnowledgeBase();
   // }, [baseData]);
 
-  const OAIKEY = "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";
+  const OAIKEY = "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";
 
   const model = new ChatOpenAI({ openAIApiKey: OAIKEY });
 
