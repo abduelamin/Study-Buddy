@@ -28,7 +28,7 @@ function App() {
     setLoading(true);
   
     try {
-      const response = await fetch("http://localhost:80/api/chat", {
+      const response = await fetch("https://studybuddy-backend-m98p.onrender.com/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
